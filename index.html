@@ -489,7 +489,7 @@
         </div>
     </section>
 
-    <a href="#" class="btn btn-danger top">
+    <a href="#" class="btn btn-danger top" id="top">
         <i class="fa-solid fa-arrow-up"></i>
     </a>
 
@@ -501,6 +501,8 @@
     <script src="js/aos.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
     <script>
         $('.innertest').owlCarousel({
@@ -519,6 +521,26 @@
                 1000: {
                     items: 1
                 }
+            }
+        })
+    </script>
+
+    <script>
+        // $(window).on("scroll", function () {
+        //     if ($(this).scrollTop() > 100) {
+        //         $("#tb").show(500);
+        //     }
+        //     else {
+        //         $("#tb").hide(500);
+        //     }
+        // })
+
+        $(document).on("scroll", function () {
+            if ($(this).scrollTop() > 100) {
+                $("#top").show(100);
+            }
+            else {
+                $("#top").hide(100);
             }
         })
     </script>
